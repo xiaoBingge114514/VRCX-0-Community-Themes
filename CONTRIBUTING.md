@@ -22,9 +22,12 @@ explicit.
 - The `author.github` field is required.
 - The optional `author.url` field may link to a personal site or profile.
 - The `testedWith` field must be the latest VRCX-0 version the author tested.
-- The `license` field should be `GPL-3.0-only` unless maintainers approve
-  another GPLv3-compatible redistributable license.
-- The optional `licenseUrl` field may link to the license text.
+- The `accentMode` field is boolean: `true` means users can customize accent
+  color in VRCX-0, `false` means the theme controls accent color.
+- The `license` field is optional. If omitted, the theme is accepted as
+  GPL-3.0-only.
+- Only set `license` and optional `licenseUrl` when maintainers approve another
+  GPLv3-compatible redistributable license.
 - `tags` may use any language, but English tags are recommended and only three
   tags are allowed.
 - If the CSS references remote images or fonts, `remoteAssets` must be `true`.
@@ -92,11 +95,12 @@ redistribute.
 
 ## License Guidance
 
-The `license` field is required. A separate `LICENSE` file inside every theme
-directory is optional.
+The `license` field may be omitted. If omitted, the theme is accepted as
+GPL-3.0-only. A separate `LICENSE` file inside every theme directory is
+optional.
 
-Use `GPL-3.0-only` by default. It matches this repository's license policy and
-is the least ambiguous choice for theme redistribution here.
+Omitting the field is the default path. It matches this repository's GPLv3
+license policy and keeps theme redistribution unambiguous.
 
 Maintainers may approve another redistributable, GPLv3-compatible license when
 there is a clear reason. Do not use non-commercial, no-derivatives, or
@@ -117,8 +121,8 @@ Before opening a pull request:
 - Validate that `theme.json` is strict JSON.
 - Check that the theme directory name matches `id`.
 - Check that `remoteAssets` matches the CSS.
-- Confirm the theme uses `GPL-3.0-only` or an approved GPLv3-compatible
-  redistributable license.
+- Confirm any explicit `license` is an approved GPLv3-compatible
+  redistributable license. If `license` is omitted, GPL-3.0-only applies.
 - Confirm the UI remains recoverable with the theme enabled.
 - Confirm `preview.webp` is included, compressed, and no larger than 512 KiB.
 

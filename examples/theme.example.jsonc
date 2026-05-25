@@ -18,13 +18,9 @@
     "url": "https://example.com"
   },
 
-  // SPDX-style license identifier. GPL-3.0-only is the default for themes in
-  // this repository unless maintainers approve another GPLv3-compatible
-  // redistributable license.
-  "license": "GPL-3.0-only",
-
-  // Optional link to the license text.
-  "licenseUrl": "https://www.gnu.org/licenses/gpl-3.0-standalone.html",
+  // License is optional. If omitted, the theme is accepted as GPL-3.0-only.
+  // Only fill license/licenseUrl when maintainers approve another
+  // GPLv3-compatible redistributable license.
 
   // Short description shown in VRCX-0.
   "description": "Community theme for VRCX-0.",
@@ -39,7 +35,7 @@
   // Set true if theme.css references remote images or fonts.
   "remoteAssets": true,
 
-  // "theme" disables the built-in accent selector while this theme is active.
-  // "app" keeps VRCX-0 accent colors controlled by the app setting.
-  "accentMode": "theme"
+  // Whether users can keep using VRCX-0's built-in accent color selector.
+  // true keeps the selector available. false means the theme controls accents.
+  "accentMode": false
 }

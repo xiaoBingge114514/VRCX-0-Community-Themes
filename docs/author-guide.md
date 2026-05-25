@@ -30,13 +30,14 @@ Important fields:
 - `version`: semantic version starting at `1.0.0`.
 - `author.github`: required GitHub username.
 - `author.url`: optional personal site or profile link.
-- `license`: redistributable license for this theme.
-- `licenseUrl`: optional link to the license text.
+- `license`: optional redistributable license for this theme. If omitted,
+  GPL-3.0-only applies.
+- `licenseUrl`: optional link to the license text when `license` is set.
 - `tags`: up to three tags; any language is allowed, English is recommended.
 - `testedWith`: latest VRCX-0 version you tested.
 - `remoteAssets`: `true` if CSS references remote images or fonts.
-- `accentMode`: `theme` if the theme controls accent colors, `app` if VRCX-0
-  should keep its built-in accent setting.
+- `accentMode`: `true` if users can keep using VRCX-0's built-in accent color
+  selector, `false` if the theme controls accent colors.
 
 ## 3. Write theme.css
 
@@ -61,8 +62,10 @@ so keep it concise and user-facing.
 
 ## 5. License the Theme
 
-Set the `license` field in `theme.json`. `licenseUrl` is optional but
-recommended. A separate `LICENSE` file inside the theme directory is optional.
+You may omit the `license` field in `theme.json`. If omitted, the theme is
+accepted as GPL-3.0-only. A separate `LICENSE` file inside the theme directory
+is optional.
 
-Use `GPL-3.0-only` by default. For exceptions and infringement handling policy,
-see `CONTRIBUTING.md`.
+Only set `license` and `licenseUrl` when maintainers approve another
+GPLv3-compatible redistributable license. For exceptions and infringement
+handling policy, see `CONTRIBUTING.md`.

@@ -9,7 +9,6 @@
     "name",
     "version",
     "author",
-    "license",
     "description",
     "tags",
     "testedWith",
@@ -84,8 +83,7 @@
       "type": "boolean"
     },
     "accentMode": {
-      "type": "string",
-      "enum": ["theme", "app"]
+      "type": "boolean"
     }
   }
 }

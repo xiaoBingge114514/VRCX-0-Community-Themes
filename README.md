@@ -80,8 +80,8 @@ across versions. See `docs/compatibility.md`.
 The repository framework, documentation, schemas, and validation policy are
 licensed under GPL-3.0-only unless stated otherwise.
 
-Each theme must declare its own redistributable license in `theme.json`. See
-`CONTRIBUTING.md` for accepted license guidance.
+Themes may omit `license` in `theme.json`. If omitted, the theme is accepted as
+GPL-3.0-only. See `CONTRIBUTING.md` for license guidance.
 
 If a theme's externally linked images or CSS code are believed to infringe
 someone's rights, please open an issue and I will review and handle it.
