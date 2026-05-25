@@ -1,0 +1,1 @@
+Uses NASA Astronomy Picture of the Day as a full-app wallpaper.

@@ -1,0 +1,28 @@
+/*
+  NASA APOD Wallpaper for VRCX-0.
+
+  This theme has a matching built-in provider in VRCX-0. When the theme id is
+  "nasa-apod-wallpaper", VRCX-0 asks the NASA APOD API for the latest image
+  entry, keeps the APOD credit in the installed CSS snapshot, and replaces the
+  wallpaper variable below with the resolved image URL.
+*/
+
+:root {
+  --vrcx-0-wallpaper-image: linear-gradient(135deg, #07111f, #263a6b 55%, #111827);
+  --vrcx-0-wallpaper-size: cover;
+  --vrcx-0-wallpaper-position: center;
+  --vrcx-0-wallpaper-repeat: no-repeat;
+  --vrcx-0-wallpaper-opacity: 1;
+  --vrcx-0-wallpaper-filter: none;
+
+  --vrcx-0-app-surface: transparent;
+  --vrcx-0-main-surface: transparent;
+  --vrcx-0-main-content-surface: rgb(0 0 0 / 0.24);
+  --vrcx-0-titlebar-surface: rgb(0 0 0 / 0.46);
+  --vrcx-0-sidebar-surface: rgb(0 0 0 / 0.54);
+  --vrcx-0-sidebar-inset-surface: rgb(0 0 0 / 0.24);
+  --vrcx-0-side-panel-surface: rgb(0 0 0 / 0.54);
+  --vrcx-0-statusbar-surface: rgb(0 0 0 / 0.56);
+  --vrcx-0-table-surface: rgb(0 0 0 / 0.36);
+  --vrcx-0-table-header-surface: rgb(0 0 0 / 0.46);
+}

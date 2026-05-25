@@ -1,0 +1,14 @@
+{
+  "id": "nasa-apod-wallpaper",
+  "name": "NASA APOD Wallpaper",
+  "version": "1.0.0",
+  "author": {
+    "name": "Map1en",
+    "github": "Map1en"
+  },
+  "description": "Background-only theme using NASA Astronomy Picture of the Day.",
+  "tags": ["nasa", "daily", "wallpaper"],
+  "testedWith": "2.2.1",
+  "remoteAssets": true,
+  "accentMode": true
+}
