@@ -1,0 +1,234 @@
+/*
+  Trans Theme Example for VRCX-0.
+
+  Palette reference:
+  - Light blue: #5BCEFA
+  - Pink: #F5A9B8
+  - White: #FFFFFF
+
+  The wallpaper is pure CSS, so this theme does not load remote assets.
+  Sidebars and bars intentionally keep stronger translucent surfaces than the
+  center content so the flag is visible without making navigation hard to read.
+*/
+
+:root {
+  --trans-flag-blue: #5bcefa;
+  --trans-flag-pink: #f5a9b8;
+  --trans-flag-white: #ffffff;
+  --trans-flag-ink: #17202a;
+  --trans-flag-panel: 40 50 70;
+  --trans-flag-hairline: rgb(255 255 255 / 0.10);
+
+  --background: rgb(30 42 58 / 0.20);
+  --foreground: rgb(239 246 252);
+  --card: rgb(36 47 64 / 0.15);
+  --card-foreground: rgb(239 246 252);
+  --popover: rgb(28 38 54 / 0.30);
+  --popover-foreground: rgb(239 246 252);
+  --primary: rgb(245 169 184);
+  --primary-foreground: rgb(8 13 21);
+  --secondary: rgb(255 255 255 / 0.10);
+  --secondary-foreground: rgb(239 246 252);
+  --muted: rgb(255 255 255 / 0.06);
+  --muted-foreground: rgb(224 236 246);
+  --accent: rgb(245 169 184 / 0.18);
+  --accent-foreground: rgb(255 255 255);
+  --destructive: rgb(255 103 126);
+  --destructive-foreground: rgb(255 255 255);
+  --border: var(--trans-flag-hairline);
+  --input: rgb(255 255 255 / 0.12);
+  --ring: rgb(245 169 184 / 0.42);
+  --sidebar: rgb(31 45 64 / 0.44);
+  --sidebar-foreground: rgb(239 246 252);
+  --sidebar-primary: rgb(245 169 184);
+  --sidebar-primary-foreground: rgb(8 13 21);
+  --sidebar-accent: rgb(255 255 255 / 0.14);
+  --sidebar-accent-foreground: rgb(255 255 255);
+  --sidebar-border: var(--trans-flag-hairline);
+  --sidebar-ring: rgb(245 169 184 / 0.42);
+
+  --vrcx-0-app-surface: transparent;
+  --vrcx-0-wallpaper-image: linear-gradient(
+    135deg,
+    var(--trans-flag-blue) 0%,
+    var(--trans-flag-blue) 20%,
+    var(--trans-flag-pink) 20%,
+    var(--trans-flag-pink) 40%,
+    var(--trans-flag-white) 40%,
+    var(--trans-flag-white) 60%,
+    var(--trans-flag-pink) 60%,
+    var(--trans-flag-pink) 80%,
+    var(--trans-flag-blue) 80%,
+    var(--trans-flag-blue) 100%
+  );
+  --vrcx-0-wallpaper-size: 100% 100%;
+  --vrcx-0-wallpaper-position: center;
+  --vrcx-0-wallpaper-repeat: no-repeat;
+  --vrcx-0-wallpaper-opacity: 1;
+  --vrcx-0-wallpaper-filter: saturate(1.24) brightness(1.16);
+
+  --vrcx-0-titlebar-surface: rgb(var(--trans-flag-panel) / 0.26);
+  --vrcx-0-main-surface: transparent;
+  --vrcx-0-main-content-surface: rgb(255 255 255 / 0.02);
+  --vrcx-0-sidebar-surface: rgb(var(--trans-flag-panel) / 0.24);
+  --vrcx-0-sidebar-inset-surface: rgb(10 31 46 / 0.08);
+  --vrcx-0-side-panel-surface: rgb(var(--trans-flag-panel) / 0.26);
+  --vrcx-0-statusbar-surface: rgb(32 40 54 / 0.30);
+  --vrcx-0-table-surface: rgb(31 40 55 / 0.28);
+  --vrcx-0-table-header-surface: rgb(50 59 76 / 0.30);
+}
+
+.vrcx-0-app-root,
+.vrcx-0-titlebar,
+.vrcx-0-main-shell,
+.vrcx-0-main-content,
+.vrcx-0-sidebar-surface,
+.vrcx-0-side-panel,
+.vrcx-0-statusbar,
+.vrcx-0-data-table {
+  color: rgb(239 246 252);
+}
+
+.vrcx-0-titlebar,
+.vrcx-0-sidebar-surface,
+.vrcx-0-side-panel,
+.vrcx-0-statusbar,
+.vrcx-0-data-table {
+  border-color: var(--trans-flag-hairline);
+}
+
+.vrcx-0-titlebar,
+.vrcx-0-sidebar-surface,
+.vrcx-0-side-panel,
+.vrcx-0-statusbar {
+  backdrop-filter: blur(14px) saturate(1.22);
+}
+
+.vrcx-0-titlebar {
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 0.10), rgb(245 169 184 / 0.08)),
+    var(--vrcx-0-titlebar-surface);
+}
+
+.vrcx-0-sidebar-surface,
+.vrcx-0-side-panel {
+  background:
+    linear-gradient(160deg, rgb(255 255 255 / 0.08), rgb(245 169 184 / 0.07)),
+    var(--vrcx-0-sidebar-surface);
+}
+
+.vrcx-0-side-panel {
+  background:
+    linear-gradient(160deg, rgb(255 255 255 / 0.08), rgb(245 169 184 / 0.07)),
+    var(--vrcx-0-side-panel-surface);
+}
+
+.vrcx-0-statusbar {
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 0.08), rgb(245 169 184 / 0.06)),
+    var(--vrcx-0-statusbar-surface);
+}
+
+.vrcx-0-main-content {
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.06);
+}
+
+[data-slot='dialog-overlay'],
+[data-slot='alert-dialog-overlay'] {
+  background-color: rgb(8 10 18 / 0.08);
+  backdrop-filter: blur(8px) saturate(1.18);
+}
+
+[data-slot='dialog-content'],
+[data-slot='alert-dialog-content'] {
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / 0.10), rgb(245 169 184 / 0.06)),
+    var(--popover);
+  border: 1px solid rgb(255 255 255 / 0.12);
+  box-shadow:
+    0 24px 80px rgb(0 0 0 / 0.30),
+    inset 0 1px 0 rgb(255 255 255 / 0.08);
+  backdrop-filter: blur(28px) saturate(1.28);
+}
+
+[data-slot='dialog-content'] [data-slot='card'],
+[data-slot='alert-dialog-content'] [data-slot='card'],
+[data-slot='dialog-content'] .bg-card,
+[data-slot='alert-dialog-content'] .bg-card,
+[data-slot='dialog-content'] .bg-background,
+[data-slot='alert-dialog-content'] .bg-background {
+  background-color: rgb(28 38 54 / 0.22);
+  backdrop-filter: blur(18px) saturate(1.20);
+}
+
+[data-slot='dialog-content'] .bg-muted,
+[data-slot='alert-dialog-content'] .bg-muted {
+  background-color: rgb(255 255 255 / 0.08);
+}
+
+.vrcx-0-data-table :is(th, td),
+.vrcx-0-table-header,
+.text-foreground,
+.text-card-foreground,
+.text-popover-foreground,
+.text-sidebar-foreground,
+.text-secondary-foreground {
+  color: rgb(239 246 252);
+}
+
+.vrcx-0-app-root :focus-visible {
+  outline-color: rgb(245 169 184 / 0.62);
+}
+
+.vrcx-0-app-root [data-slot='button'] {
+  border-color: transparent !important;
+  box-shadow: none;
+}
+
+.vrcx-0-sidebar-surface [data-slot='sidebar-menu-button'][data-active='true'],
+.vrcx-0-sidebar-surface [data-slot='sidebar-menu-button']:hover {
+  background: linear-gradient(
+    90deg,
+    rgb(255 255 255 / 0.16),
+    rgb(245 169 184 / 0.20)
+  );
+  color: rgb(255 255 255);
+}
+
+.vrcx-0-data-table {
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / 0.06), rgb(245 169 184 / 0.05)),
+    var(--vrcx-0-table-surface);
+  backdrop-filter: blur(12px) saturate(1.16);
+}
+
+.vrcx-0-table-header {
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 0.10), rgb(245 169 184 / 0.07)),
+    var(--vrcx-0-table-header-surface);
+  backdrop-filter: blur(12px) saturate(1.18);
+}
+
+.bg-background {
+  background-color: var(--background);
+  backdrop-filter: blur(12px) saturate(1.16);
+}
+
+.bg-card {
+  background-color: var(--card);
+  backdrop-filter: blur(12px) saturate(1.16);
+}
+
+.bg-muted {
+  background-color: var(--muted);
+  backdrop-filter: blur(12px) saturate(1.16);
+}
+
+.border,
+[class*='border-'] {
+  border-color: var(--trans-flag-hairline);
+}
+
+.text-muted-foreground {
+  color: rgb(226 238 248 / 0.90);
+}

@@ -1,5 +1,20 @@
 {
   "$schema": "../schemas/catalog.schema.json",
   "schemaVersion": 1,
-  "themes": []
+  "themes": [
+    {
+      "id": "trans-theme-example",
+      "name": "Trans Theme Example",
+      "version": "1.0.0",
+      "author": {
+        "name": "Map1en",
+        "github": "Map1en"
+      },
+      "description": "Diagonal trans pride flag wallpaper with readable translucent app surfaces.",
+      "tags": ["trans", "pride", "wallpaper"],
+      "testedWith": "2.2.1",
+      "remoteAssets": false,
+      "accentMode": false
+    }
+  ]
 }
