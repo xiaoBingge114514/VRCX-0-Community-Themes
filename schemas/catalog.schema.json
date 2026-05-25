@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Map1en/VRCX-0-Community-Themes/master/schemas/catalog.schema.json",
+  "title": "VRCX-0 Community Theme Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "themes"],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "themes": {
+      "type": "array",
+      "items": {
+        "$ref": "./theme.schema.json"
+      },
+      "uniqueItems": true
+    }
+  }
+}

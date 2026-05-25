@@ -1,0 +1,45 @@
+{
+  // Stable lowercase id. The theme directory must use the same name:
+  // themes/glass-dark/
+  "id": "glass-dark",
+
+  // User-facing display name.
+  "name": "Glass Dark",
+
+  // Semantic version for the theme package. New themes start at 1.0.0.
+  "version": "1.0.0",
+
+  // Author metadata. GitHub is required because themes are submitted through
+  // GitHub pull requests. url is optional and may point to a personal site or
+  // profile.
+  "author": {
+    "name": "Author",
+    "github": "author",
+    "url": "https://example.com"
+  },
+
+  // SPDX-style license identifier is preferred. MIT is recommended for most
+  // themes. BSD-2-Clause, BSD-3-Clause, Apache-2.0, GPL-3.0-only, and
+  // CC0-1.0 are also accepted.
+  "license": "MIT",
+
+  // Optional link to the license text.
+  "licenseUrl": "https://opensource.org/license/mit",
+
+  // Short description shown in VRCX-0.
+  "description": "Community theme for VRCX-0.",
+
+  // Search and filtering tags. Any language is allowed, but English tags are
+  // recommended. Keep at most three.
+  "tags": ["dark", "glass", "wallpaper"],
+
+  // Latest VRCX-0 version that the author has tested.
+  "testedWith": "2.2.1",
+
+  // Set true if theme.css references remote images or fonts.
+  "remoteAssets": true,
+
+  // "theme" disables the built-in accent selector while this theme is active.
+  // "app" keeps VRCX-0 accent colors controlled by the app setting.
+  "accentMode": "theme"
+}
