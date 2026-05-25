@@ -10,6 +10,17 @@ Catalog URL:
 https://raw.githubusercontent.com/Map1en/VRCX-0-Community-Themes/master/themes/index.json
 ```
 
+## Maintained Themes
+
+- [Trans Theme Example](themes/trans-theme-example/) - Diagonal trans pride flag
+  wallpaper with readable translucent app surfaces.
+
+## Theme Developer Build
+
+Theme authors should download the dedicated VRCX-0 theme developer build from
+[package-theme-devkit](https://github.com/Map1en/VRCX-0/actions/workflows/package-theme-devkit.yml).
+It is intended for theme CSS development and debugging.
+
 ## How The Catalog Works
 
 `themes/index.json` only lists theme ids. VRCX-0 then loads metadata from each
@@ -31,6 +42,8 @@ remote CSS file at runtime.
 ## Documentation
 
 - Author a theme: `docs/author-guide.md`
+- Download the theme developer build:
+  [package-theme-devkit](https://github.com/Map1en/VRCX-0/actions/workflows/package-theme-devkit.yml)
 - Submit or update a theme: `CONTRIBUTING.md`
 - CSS hooks and layer order: `docs/css-hooks.md`
 - Compatibility policy: `docs/compatibility.md`

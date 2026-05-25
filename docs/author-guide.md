@@ -54,8 +54,9 @@ Prefer VRCX-0 owned variables for layout-level effects:
 
 See `docs/css-hooks.md` for the current hook list.
 
-To debug CSS, use the official VRCX-0 repository and start the app in
-development mode.
+To debug CSS, download the dedicated theme developer build from
+[package-theme-devkit](https://github.com/Map1en/VRCX-0/actions/workflows/package-theme-devkit.yml).
+This build is intended for theme authors and CSS debugging.
 
 ## 4. Write README.md
 
