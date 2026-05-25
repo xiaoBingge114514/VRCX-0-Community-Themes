@@ -18,13 +18,13 @@
     "url": "https://example.com"
   },
 
-  // SPDX-style license identifier is preferred. MIT is recommended for most
-  // themes. BSD-2-Clause, BSD-3-Clause, Apache-2.0, GPL-3.0-only, and
-  // CC0-1.0 are also accepted.
-  "license": "MIT",
+  // SPDX-style license identifier. GPL-3.0-only is the default for themes in
+  // this repository unless maintainers approve another GPLv3-compatible
+  // redistributable license.
+  "license": "GPL-3.0-only",
 
   // Optional link to the license text.
-  "licenseUrl": "https://opensource.org/license/mit",
+  "licenseUrl": "https://www.gnu.org/licenses/gpl-3.0-standalone.html",
 
   // Short description shown in VRCX-0.
   "description": "Community theme for VRCX-0.",

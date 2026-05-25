@@ -45,7 +45,7 @@ README.md
 
 ## Theme Package
 
-Each theme package must have its own directory under `themes/`.
+Each theme package has its own directory under `themes/`.
 
 ```text
 themes/
@@ -56,77 +56,32 @@ themes/
     preview.webp
 ```
 
-The directory name and `theme.json` `id` must match.
-
-`theme.css` is the only CSS entry file. `preview.webp` is required and must use
-WebP format. Preview images must be compressed, stripped of unnecessary
-metadata, and no larger than 512 KiB.
+For authoring requirements, see `CONTRIBUTING.md` and `docs/author-guide.md`.
 
 ## Manifest
 
-Every theme must include a `theme.json` file.
-
-```json
-{
-  "id": "glass-dark",
-  "name": "Glass Dark",
-  "version": "1.0.0",
-  "author": {
-    "name": "Author",
-    "github": "author",
-    "url": "https://example.com"
-  },
-  "license": "MIT",
-  "licenseUrl": "https://opensource.org/license/mit",
-  "description": "Community theme for VRCX-0.",
-  "tags": ["dark", "glass", "wallpaper"],
-  "testedWith": "2.2.1",
-  "remoteAssets": false,
-  "accentMode": "theme"
-}
-```
-
-Use strict JSON in real theme manifests. Use `examples/theme.example.jsonc`
-only as a commented reference.
+Every theme must include a strict JSON `theme.json` manifest. Start from
+`examples/theme.example.jsonc` and validate against `schemas/theme.schema.json`.
 
 ## CSS Loading Model
 
-VRCX-0 applies CSS in this order:
-
-1. Built-in app CSS.
-2. Installed theme snapshot.
-3. User override CSS.
-
-The app should not live-load a remote CSS file at runtime. A theme is installed
-by downloading `theme.css`, storing a local snapshot, and injecting that local
-snapshot later.
+VRCX-0 installs a local snapshot of `theme.css`; it should not live-load a
+remote CSS file at runtime. For layer order and app-owned CSS hooks, see
+`docs/css-hooks.md`.
 
 ## Compatibility Policy
 
 VRCX-0 may change page structure and styling as the app evolves. App
 development takes priority, and themes are not guaranteed to stay compatible
-across versions.
+across versions. See `docs/compatibility.md`.
 
 ## Licenses
 
 The repository framework, documentation, schemas, and validation policy are
 licensed under GPL-3.0-only unless stated otherwise.
 
-Each theme must declare its own redistributable license in `theme.json`.
-`licenseUrl` is optional but recommended. A separate license file inside every
-theme directory is not required.
+Each theme must declare its own redistributable license in `theme.json`. See
+`CONTRIBUTING.md` for accepted license guidance.
 
-Recommended license choices:
-
-- `MIT`: recommended for most themes; simple and easy to redistribute.
-- `BSD-2-Clause` or `BSD-3-Clause`: permissive and easy to reuse.
-- `Apache-2.0`: permissive and GPLv3-compatible.
-- `GPL-3.0-only`: compatible with the repository, but more restrictive for
-  reuse.
-- `CC0-1.0`: acceptable for authors who want the fewest restrictions.
-
-Use one of the recommended licenses unless maintainers approve another
-redistributable, GPLv3-compatible license. Do not use non-commercial,
-no-derivatives, or all-rights-reserved terms.
-
-This is project policy, not legal advice.
+If a theme's externally linked images or CSS code are believed to infringe
+someone's rights, please open an issue and I will review and handle it.

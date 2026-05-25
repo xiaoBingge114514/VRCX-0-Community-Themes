@@ -22,7 +22,8 @@ explicit.
 - The `author.github` field is required.
 - The optional `author.url` field may link to a personal site or profile.
 - The `testedWith` field must be the latest VRCX-0 version the author tested.
-- The `license` field must name a redistributable license.
+- The `license` field should be `GPL-3.0-only` unless maintainers approve
+  another GPLv3-compatible redistributable license.
 - The optional `licenseUrl` field may link to the license text.
 - `tags` may use any language, but English tags are recommended and only three
   tags are allowed.
@@ -94,24 +95,20 @@ redistribute.
 The `license` field is required. A separate `LICENSE` file inside every theme
 directory is optional.
 
-Recommended license choices:
+Use `GPL-3.0-only` by default. It matches this repository's license policy and
+is the least ambiguous choice for theme redistribution here.
 
-- `MIT`: recommended for most themes; simple and easy to redistribute.
-- `BSD-2-Clause` or `BSD-3-Clause`: permissive and easy to reuse.
-- `Apache-2.0`: permissive and GPLv3-compatible.
-- `GPL-3.0-only`: compatible with the repository, but more restrictive for
-  reuse.
-- `CC0-1.0`: acceptable for authors who want the fewest restrictions.
+Maintainers may approve another redistributable, GPLv3-compatible license when
+there is a clear reason. Do not use non-commercial, no-derivatives, or
+all-rights-reserved terms.
 
-Use one of the recommended licenses unless maintainers approve another
-redistributable, GPLv3-compatible license. Do not use non-commercial,
-no-derivatives, or all-rights-reserved terms.
+If a theme's externally linked images or CSS code are believed to infringe
+someone's rights, please open an issue and I will review and handle it.
 
 ## Compatibility Expectations
 
-VRCX-0 may change page structure and styling as the app evolves. App
-development takes priority, and themes are not guaranteed to stay compatible
-across versions.
+Themes are not guaranteed to stay compatible across VRCX-0 versions. See
+`docs/compatibility.md` for the compatibility policy.
 
 ## Review Checklist
 
@@ -120,7 +117,8 @@ Before opening a pull request:
 - Validate that `theme.json` is strict JSON.
 - Check that the theme directory name matches `id`.
 - Check that `remoteAssets` matches the CSS.
-- Confirm the theme has a redistributable license.
+- Confirm the theme uses `GPL-3.0-only` or an approved GPLv3-compatible
+  redistributable license.
 - Confirm the UI remains recoverable with the theme enabled.
 - Confirm `preview.webp` is included, compressed, and no larger than 512 KiB.
 

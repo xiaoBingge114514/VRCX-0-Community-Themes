@@ -12,7 +12,8 @@
 - [ ] `version` was added or bumped.
 - [ ] `author.github` is set.
 - [ ] `testedWith` is the latest VRCX-0 version I tested.
-- [ ] `license` is set to a redistributable license.
+- [ ] `license` is set to `GPL-3.0-only` or an approved GPLv3-compatible
+      redistributable license.
 - [ ] `remoteAssets` accurately reflects remote image or font usage.
 - [ ] `tags` use at most three entries.
 - [ ] `preview.webp` is included.

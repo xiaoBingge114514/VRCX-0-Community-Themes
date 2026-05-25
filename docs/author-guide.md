@@ -64,15 +64,5 @@ so keep it concise and user-facing.
 Set the `license` field in `theme.json`. `licenseUrl` is optional but
 recommended. A separate `LICENSE` file inside the theme directory is optional.
 
-Recommended choices:
-
-- `MIT`: recommended for most themes.
-- `BSD-2-Clause` or `BSD-3-Clause`: permissive and easy to reuse.
-- `Apache-2.0`: permissive and GPLv3-compatible.
-- `GPL-3.0-only`: compatible with the repository, but more restrictive for
-  reuse.
-- `CC0-1.0`: good for minimal restrictions.
-
-Use one of the recommended licenses unless maintainers approve another
-redistributable, GPLv3-compatible license. Do not use non-commercial,
-no-derivatives, or all-rights-reserved terms.
+Use `GPL-3.0-only` by default. For exceptions and infringement handling policy,
+see `CONTRIBUTING.md`.
