@@ -12,8 +12,8 @@ https://raw.githubusercontent.com/Map1en/VRCX-0-Community-Themes/master/themes/i
 
 ## Maintained Themes
 
-- [Trans Theme Example](themes/trans-theme-example/) - Diagonal trans pride flag
-  wallpaper with readable translucent app surfaces.
+- [Bing Daily Wallpaper](themes/bing-daily-wallpaper/) by Map1en
+- [Trans Theme Example](themes/trans-theme-example/) by Map1en
 
 ## Theme Developer Build
 

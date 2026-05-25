@@ -1,0 +1,26 @@
+/*
+  Bing Daily Wallpaper for VRCX-0.
+
+  This is intentionally a background-only theme. The wallpaper URL is stable,
+  but the remote service redirects it to the current Bing daily wallpaper.
+*/
+
+:root {
+  --vrcx-0-wallpaper-image: url("https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN");
+  --vrcx-0-wallpaper-size: cover;
+  --vrcx-0-wallpaper-position: center;
+  --vrcx-0-wallpaper-repeat: no-repeat;
+  --vrcx-0-wallpaper-opacity: 1;
+  --vrcx-0-wallpaper-filter: none;
+
+  --vrcx-0-app-surface: transparent;
+  --vrcx-0-main-surface: transparent;
+  --vrcx-0-main-content-surface: rgb(0 0 0 / 0.18);
+  --vrcx-0-titlebar-surface: rgb(0 0 0 / 0.42);
+  --vrcx-0-sidebar-surface: rgb(0 0 0 / 0.48);
+  --vrcx-0-sidebar-inset-surface: rgb(0 0 0 / 0.20);
+  --vrcx-0-side-panel-surface: rgb(0 0 0 / 0.48);
+  --vrcx-0-statusbar-surface: rgb(0 0 0 / 0.52);
+  --vrcx-0-table-surface: rgb(0 0 0 / 0.32);
+  --vrcx-0-table-header-surface: rgb(0 0 0 / 0.42);
+}

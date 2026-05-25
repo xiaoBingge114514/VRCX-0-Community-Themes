@@ -2,6 +2,7 @@
   "$schema": "../schemas/catalog.schema.json",
   "schemaVersion": 1,
   "themes": [
+    "bing-daily-wallpaper",
     "trans-theme-example"
   ]
 }
