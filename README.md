@@ -12,7 +12,6 @@ https://raw.githubusercontent.com/Map1en/VRCX-0-Community-Themes/master/themes/i
 
 ## Maintained Themes
 
-- [Bing Daily Wallpaper](themes/bing-daily-wallpaper/) by Map1en
 - [NASA APOD Wallpaper](themes/nasa-apod-wallpaper/) by Map1en
 - [Trans Theme Example](themes/trans-theme-example/) by Map1en
 
