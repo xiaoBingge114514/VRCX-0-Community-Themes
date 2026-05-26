@@ -23,14 +23,12 @@ For file preparation and manifest field details, see `docs/author-guide.md`.
   higher.
 - The `author.github` field is required.
 - The `testedWith` field must be the latest VRCX-0 version the author tested.
-- The `license` field is optional. If omitted, the theme is accepted as
-  GPL-3.0-only.
-- Only set `license` and optional `licenseUrl` when maintainers approve another
-  GPLv3-compatible redistributable license.
+- By submitting a theme, the contributor agrees that the submitted theme follows
+  GPL-3.0-only for VRCX-0 community theme distribution.
 - If the CSS references remote images or fonts, `remoteAssets` must be `true`.
 - `preview.webp` must be WebP, compressed, and no larger than 512 KiB.
 - The preview image must only include assets the author owns, has permission to
-  use, or may redistribute under a compatible license.
+  use, or may redistribute.
 - Do not minify or obfuscate CSS. CSS must be reviewable.
 
 ## Theme Directory
@@ -71,19 +69,6 @@ Not allowed:
 Remote images and fonts are allowed when `remoteAssets` is `true`. Authors are
 responsible for using assets they have permission to reference or redistribute.
 
-## License Guidance
-
-The `license` field may be omitted. If omitted, the theme is accepted as
-GPL-3.0-only. A separate `LICENSE` file inside every theme directory is
-optional.
-
-Omitting the field is the default path. It matches this repository's GPLv3
-license policy and keeps theme redistribution unambiguous.
-
-Maintainers may approve another redistributable, GPLv3-compatible license when
-there is a clear reason. Do not use non-commercial, no-derivatives, or
-all-rights-reserved terms.
-
 If a theme's externally linked images or CSS code are believed to infringe
 someone's rights, please open an issue and I will review and handle it.
 
@@ -95,12 +80,10 @@ Before opening a pull request:
 - Check that the theme directory name matches `id`.
 - Check that `themes/index.json` contains only the theme id string.
 - Check that `remoteAssets` matches the CSS.
-- Confirm any explicit `license` is an approved GPLv3-compatible
-  redistributable license. If `license` is omitted, GPL-3.0-only applies.
 - Confirm the UI remains recoverable with the theme enabled.
 - Confirm `preview.webp` is included, compressed, and no larger than 512 KiB.
 - Confirm the preview image uses only assets the author owns, has permission to
-  use, or may redistribute under a compatible license.
+  use, or may redistribute.
 
 ## Updating a Theme
 

@@ -49,6 +49,5 @@ remote CSS file at runtime.
 - Compatibility policy: `docs/compatibility.md`
 - Manifest examples and schemas: `examples/`, `schemas/`
 
-The repository framework, documentation, schemas, and default theme license are
-GPL-3.0-only unless stated otherwise. If a theme omits `license` in
-`theme.json`, it is accepted as GPL-3.0-only.
+By submitting a theme to this catalog, the contributor agrees that the submitted
+theme follows GPL-3.0-only for VRCX-0 community theme distribution.

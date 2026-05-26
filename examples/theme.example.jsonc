@@ -18,10 +18,6 @@
     "url": "https://example.com"
   },
 
-  // License is optional. If omitted, the theme is accepted as GPL-3.0-only.
-  // Only fill license/licenseUrl when maintainers approve another
-  // GPLv3-compatible redistributable license.
-
   // Short description shown in VRCX-0.
   "description": "Community theme for VRCX-0.",
 
