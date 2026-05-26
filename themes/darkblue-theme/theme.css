@@ -1,0 +1,219 @@
+/* Darkblue Theme */
+
+.dark {
+  /* 基础 */
+  --background: hsl(216, 17%, 11%) !important;           /*  页面背景 */
+  --foreground: hsl(210, 15%, 100%) !important;          /*  主文本 */
+  
+  /* 卡片与浮层 */
+  --card: hsl(210, 15%, 17%) !important;                /* 卡片/描述列表背景 */
+  --card-foreground: hsl(210, 15%, 100%) !important;    /* #ffffff */
+  --popover: hsl(210, 15%, 17%) !important;             /*  弹出层背景 */
+  --popover-foreground: hsl(210, 15%, 100%) !important; /* #ffffff */
+  
+  /* 主题色 */
+  --primary: #66b1ff !important;                        /* 主题蓝 */
+  --primary-foreground: hsl(210, 15%, 6%) !important;   /* 主色上的文本 */
+  --sidebar-accent: rgba(102, 177, 255, 0.3) !important;/* 侧边栏强调背景（半透明主色） */
+
+  --secondary: hsl(210, 15%, 20%) !important;           /* 次要按钮背景 */
+  --secondary-foreground: hsl(210, 15%, 78%) !important; /* 次要按钮文本 */
+  
+  --muted: hsl(210, 15%, 13%) !important;              /* 静音背景 */
+  --muted-foreground: hsl(210, 15%, 70%) !important;   /* 静音/次要文本 */
+  
+  --accent: hsl(212, 25%, 37%) !important;             /* 悬停/强调背景 */
+  --accent-foreground: hsl(210, 15%, 100%) !important; /* #ffffff */
+
+  --destructive: oklch(70.4% .191 22.216);
+  --destructive-foreground: oklch(98.5% 0 0);
+  
+  /* 边框与输入 */
+  --border: hsl(210, 15%, 23%) !important;             /* 基础边框 */
+  --input: hsl(210, 15%, 20%) !important;              /* 输入框背景 */
+  --input-foreground: hsl(210, 15%, 100%) !important;  /* #ffffff */
+  --ring: hsl(210, 15%, 33%) !important;               /* focus边框色 */
+  
+  /* 语义化扩展（可选） */
+  --success: #67c23a !important;
+  --success-foreground: hsl(210, 15%, 100%) !important;
+  --warning: #e6a23c !important;
+  --warning-foreground: hsl(210, 15%, 100%) !important;
+  --info: #909399 !important;
+  --info-foreground: hsl(210, 15%, 100%) !important;
+
+  /* Switch 专用变量（新增） */
+  --switch-checked: #66b1ff !important;                  /* 开启状态轨道 */
+  --switch-checked-thumb: #ffffff !important;            /* 开启状态滑块 */
+  --switch-unchecked: hsl(210, 15%, 13%) !important;     /* 关闭状态轨道 */
+  --switch-unchecked-thumb: hsl(0, 0%, 100%) !important; /* 关闭状态滑块 */
+}
+
+.dark [role="switch"][data-state="checked"] {
+  background-color: var(--switch-checked) !important;
+  border-color: var(--switch-checked) !important;
+}
+
+.dark [role="switch"][data-state="unchecked"] {
+  background-color: var(--switch-unchecked) !important;
+}
+
+.dark [role="switch"] span {
+  /* 滑块颜色 */
+  background-color: var(--switch-unchecked-thumb) !important;
+}
+
+.dark [role="switch"][data-state="checked"] span {
+  background-color: var(--switch-checked-thumb) !important;
+}
+
+/* 输入框被选中文本颜色 */
+.dark input::selection,
+.dark textarea::selection {
+background-color: rgba(102, 177, 255, 0.4) !important;  /* 主色 #66b1ff 半透明 */
+color: #ffffff !important;
+}
+
+/* --- 侧边栏背景优化：深空静谧蓝 (低饱和/不显眼) --- */
+/* 使用与页面背景 --background 颜色一致的深蓝基底 */
+.vrcx-0-sidebar-surface {
+background-color: #1A1D28 !important; /* 比原背景稍深一点的藏青 */
+border-color: rgba(102, 177, 255, 0.1) !important; /* 极淡的描边 */
+}
+
+/* --- 状态栏颜色同步 --- */
+/* 锁定状态栏元素，设置背景色为 --background 变量 */
+[data-vrcx-0-surface="statusbar"] {
+    background-color: var(--background) !important;
+}
+
+/* --- 深蓝主题增强：加深卡片层级 --- */
+/* 目标：让卡片比基础背景（#1E1F26）稍微深一点，增加立体感 */
+.bg-card {
+background-color: #232530 !important; 
+}
+
+
+/* --- 全局按钮与链接悬停高亮 --- */
+button:hover,
+a:hover {
+    background-color: rgba(102, 177, 255, 0.25) !important; /* 全局统一的半透明蓝色悬停背景 */
+    color: #66b1ff !important; /* 悬停时文字统一变为你的主题蓝 */
+}
+
+/* 1. 选中/激活状态*/
+[data-slot="toggle-group-item"][data-state="on"],
+[data-slot="toggle-group-item"][aria-pressed="true"] {
+    background-color: #2563EB !important;
+    color: #ffffff !important;
+}
+
+/* 2. 悬停与点击瞬间的状态 */
+[data-slot="toggle-group-item"]:hover,
+[data-slot="toggle-group-item"]:active {
+    background-color: rgba(102, 177, 255, 0.25) !important;
+    color: #66b1ff !important;
+}
+
+/* 3. 顺便把外层 group 容器的鼠标事件限制解除（以防万一） */
+.group [data-slot="toggle-group-item"] {
+    pointer-events: auto !important;
+}
+
+[data-slot="toggle-group-item"][data-state="on"],
+[data-slot="toggle-group-item"][aria-pressed="true"] {
+    background-color: #2563EB !important;
+    color: #ffffff !important;
+}
+
+/* --- 局部高亮：仅限好友位置内的卡片 --- */
+
+/* 1. 核心规则：仅当卡片位于好友位置容器内时，才应用悬停效果 */
+.friend-view__scroll [data-slot="context-menu-trigger"]:hover {
+    background-color: rgba(102, 177, 255, 0.25) !important
+}
+
+/* --- 局部高亮：仅限 DataTable 内的行 --- */
+
+/* 1. 锁定 DataTable 内的表格行，设置统一的悬停与选中背景色 */
+[data-vrcx-0-surface="data-table"] tbody tr:hover,
+[data-vrcx-0-surface="data-table"] tbody tr[data-state="selected"],
+[data-vrcx-0-surface="data-table"] tbody tr[aria-selected="true"] {
+    background-color: rgba(59, 130, 246, 0.25) !important; /* 深邃半透明蓝 */
+    color: #FFFFFF !important; /* 保证文字在深色背景下清晰可见 */
+}
+
+/* 2. 确保 DataTable 内单元格里的按钮、链接等交互元素保持协调 */
+[data-vrcx-0-surface="data-table"] button:hover,
+[data-vrcx-0-surface="data-table"] a:hover {
+    background-color: transparent !important; /* 取消独立元素的悬停背景 */
+    color: #60A5FA !important; /* 统一使用稍亮的蓝色文字 */
+}
+
+/* 3. 如果 DataTable 内部也有 Badge (徽章) 组件，同步其边框和文字颜色 */
+[data-vrcx-0-surface="data-table"] [data-slot="badge"] {
+    border-color: rgba(59, 130, 246, 0.5) !important;
+    color: #60A5FA !important;
+}
+
+/* --- 为主内容区内收藏＆分组的按钮添加悬停高亮 --- */
+
+/* 核心修复：锁定 data-vrcx-0-surface="main-content" 下的 hover:bg-muted 元素 */
+[data-vrcx-0-surface="main-content"] .hover\:bg-muted:hover {
+    background-color: rgba(102, 177, 255, 0.25) !important; /* 你的主题半透明蓝 */
+    color: #66b1ff !important; /* 文字同步变蓝 */
+}
+
+/* --- 好友位置 Tabs 主题化高亮 --- */
+
+/* 1. 选中态 (Active)：强制应用主题蓝背景 + 白字 */
+[data-slot="tabs-list"] [data-slot="tabs-trigger"][data-state="active"] {
+    background-color: #66b1ff !important; /* 你的主题主色 */
+    color: #ffffff !important;            /* 选中时文字变白，对比度更高 */
+}
+
+
+/* --- 排除危险按钮 (Destructive) 的高亮变色 --- */
+
+/* 1. 保护普通危险按钮的悬停与点击状态 */
+button[data-variant="destructive"]:hover,
+button.destructive:hover,
+button.danger:hover {
+    /* 悬停时加深到 30% 的不透明度，模拟原本的亮红效果 */
+    background-color: color-mix(in oklab, var(--destructive) 30%, transparent) !important; 
+    color: var(--destructive) !important; /* 文字保持鲜艳的危险色 */
+}
+
+button[data-variant="destructive"]:active,
+button.destructive:active,
+button.danger:active {
+    /* 点击瞬间进一步加深到 40%，提供扎实的按压反馈 */
+    background-color: color-mix(in oklab, var(--destructive) 40%, transparent) !important;
+    color: var(--destructive) !important;
+}
+
+/* 2. 保护 Toggle Group 内的危险选项选中态 */
+[data-slot="toggle-group-item"][data-variant="destructive"][data-state="on"],
+[data-slot="toggle-group-item"].destructive[data-state="on"] {
+    /* 选中态保持标准的危险色背景 */
+    background-color: var(--destructive) !important; 
+    color: var(--destructive-foreground) !important; /* 配套的前景文字色（通常是白色） */
+}
+
+/* 3. 保护 DataTable 内部嵌套的危险按钮 */
+[data-vrcx-0-surface="data-table"] button[data-variant="destructive"]:hover {
+    background-color: color-mix(in oklab, var(--destructive) 30%, transparent) !important;
+    color: var(--destructive) !important;
+}
+
+/* 4. 保护main-content内部的危险按钮（如果有的话） */
+[data-vrcx-0-surface="main-content"] .hover\:bg-muted:hover button[data-variant="destructive"] {
+    background-color: color-mix(in oklab, var(--destructive) 30%, transparent) !important;
+    color: var(--destructive) !important;
+}
+
+/* 5. 保护Tabs-list内部的危险按钮（如果有的话） */
+[data-slot="tabs-list"] [data-slot="tabs-trigger"]:hover button[data-variant="destructive"] {
+    background-color: color-mix(in oklab, var(--destructive) 30%, transparent) !important;
+    color: var(--destructive) !important;
+}

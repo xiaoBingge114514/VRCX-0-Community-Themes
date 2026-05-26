@@ -3,6 +3,7 @@
   "schemaVersion": 1,
   "themes": [
     "nasa-apod-wallpaper",
-    "trans-theme-example"
+    "trans-theme-example",
+    "darkblue-theme"
   ]
 }
