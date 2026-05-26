@@ -6,7 +6,7 @@
     "name": "Map1en",
     "github": "Map1en"
   },
-  "description": "Background-only theme using NASA Astronomy Picture of the Day.",
+  "description": "Background-only theme using APOD entries without copyright metadata.",
   "tags": ["nasa", "daily", "wallpaper"],
   "testedWith": "2.2.1",
   "remoteAssets": true,

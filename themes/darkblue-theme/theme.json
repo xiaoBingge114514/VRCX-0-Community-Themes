@@ -8,8 +8,13 @@
     "url": "https://github.com/xiaoBingge114514"
   },
 
+<<<<<<< HEAD
   "description": "Deep blue cohesive theme for VRCX-0 featuring a dark background, harmonized sidebar surfaces, and status bar.",
   "tags": ["dark", "blue", "minimal"],
+=======
+  "description": "xiaoBingge114514 theme for VRCX-0.",
+  "tags": ["dark", "blue", "wallpaper"],
+>>>>>>> de709a4336839c3447b7012eeeaee715ebba9a98
   "testedWith": "2.2.1",
   "remoteAssets": false,
   "accentMode": false
