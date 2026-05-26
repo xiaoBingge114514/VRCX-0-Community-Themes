@@ -17,7 +17,8 @@ themes/my-theme/
 The directory name must match `theme.json` `id`.
 `preview.webp` is required and must use that exact file name and WebP format.
 Keep it compressed, stripped of unnecessary metadata, and no larger than
-512 KiB.
+512 KiB. The preview image must only include assets the author owns, has
+permission to use, or may redistribute under a compatible license.
 
 ## 2. Write theme.json
 

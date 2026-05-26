@@ -29,6 +29,8 @@ For file preparation and manifest field details, see `docs/author-guide.md`.
   GPLv3-compatible redistributable license.
 - If the CSS references remote images or fonts, `remoteAssets` must be `true`.
 - `preview.webp` must be WebP, compressed, and no larger than 512 KiB.
+- The preview image must only include assets the author owns, has permission to
+  use, or may redistribute under a compatible license.
 - Do not minify or obfuscate CSS. CSS must be reviewable.
 
 ## Theme Directory
@@ -98,6 +100,8 @@ Before opening a pull request:
   redistributable license. If `license` is omitted, GPL-3.0-only applies.
 - Confirm the UI remains recoverable with the theme enabled.
 - Confirm `preview.webp` is included, compressed, and no larger than 512 KiB.
+- Confirm the preview image uses only assets the author owns, has permission to
+  use, or may redistribute under a compatible license.
 
 ## Updating a Theme
 
