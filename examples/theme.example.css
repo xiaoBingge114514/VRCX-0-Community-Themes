@@ -1,13 +1,13 @@
 /*
 Theme: Glass Dark
-Mode: app-wide or main-content wallpaper
+Mode: app-wide or main-content image layer
 Tested with: VRCX-0 2.2.1
 Remote assets: yes/no
 
 This file is an annotated example only. It is not listed in themes/index.json.
 */
 
-/* App-wide wallpaper mode. This covers titlebar, sidebars, main content, side
+/* App-wide image layer. This covers titlebar, sidebars, main content, side
    panel, and status bar behind their surface layers. */
 :root {
   --vrcx-0-wallpaper-image: none;
@@ -18,8 +18,7 @@ This file is an annotated example only. It is not listed in themes/index.json.
   --vrcx-0-wallpaper-filter: none;
 }
 
-/* Main-content wallpaper mode. Use this when only the center page area should
-   show an image while shell surfaces stay ordinary. */
+/* Main-content image layer. This affects only the center page area. */
 :root {
   --vrcx-0-main-content-wallpaper-image: none;
   --vrcx-0-main-content-wallpaper-size: cover;
@@ -29,7 +28,7 @@ This file is an annotated example only. It is not listed in themes/index.json.
   --vrcx-0-main-content-wallpaper-filter: none;
 }
 
-/* Surface variables control how much of the wallpaper can show through. */
+/* Surface variables control the visible background of major app areas. */
 :root {
   --vrcx-0-app-surface: hsl(var(--background));
   --vrcx-0-titlebar-surface: hsl(var(--background));

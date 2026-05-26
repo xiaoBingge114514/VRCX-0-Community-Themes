@@ -15,9 +15,9 @@
 - [ ] `license` is set to `GPL-3.0-only` or an approved GPLv3-compatible
       redistributable license.
 - [ ] `remoteAssets` accurately reflects remote image or font usage.
-- [ ] `tags` use at most three entries.
+- [ ] `tags` use one to three entries.
 - [ ] `preview.webp` is included.
-- [ ] `preview.webp` is compressed and no larger than 512 KiB.
+- [ ] `preview.webp` is compressed and no larger than 256 KiB.
 - [ ] CSS is readable and not minified or obfuscated.
 - [ ] CSS does not hide recovery, close, exit, login, confirmation, or
       destructive-action UI.

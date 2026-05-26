@@ -17,7 +17,8 @@ themes/my-theme/
 The directory name must match `theme.json` `id`.
 `preview.webp` is required and must use that exact file name and WebP format.
 Keep it compressed, stripped of unnecessary metadata, and no larger than
-512 KiB.
+256 KiB. The preview image must only include assets the author owns, has
+permission to use, or may redistribute.
 
 ## 2. Write theme.json
 
@@ -30,10 +31,7 @@ Important fields:
 - `version`: semantic version starting at `1.0.0`.
 - `author.github`: required GitHub username.
 - `author.url`: optional personal site or profile link.
-- `license`: optional redistributable license for this theme. If omitted,
-  GPL-3.0-only applies.
-- `licenseUrl`: optional link to the license text when `license` is set.
-- `tags`: up to three tags; any language is allowed, English is recommended.
+- `tags`: one to three short tags.
 - `testedWith`: latest VRCX-0 version you tested.
 - `remoteAssets`: `true` if CSS references remote images or fonts.
 - `accentMode`: `true` if users can keep using VRCX-0's built-in accent color
@@ -46,11 +44,8 @@ After adding the directory, add only the theme id string to `themes/index.json`.
 Theme CSS is ordinary CSS. You can use VRCX-0 surface variables, app CSS
 variables, and selectors.
 
-Prefer VRCX-0 owned variables for layout-level effects:
-
-- App-wide wallpaper: `--vrcx-0-wallpaper-image`.
-- Center-only wallpaper: `--vrcx-0-main-content-wallpaper-image`.
-- Shell transparency: `--vrcx-0-*-surface`.
+Prefer VRCX-0 owned variables for layout-level effects, such as shell and app
+surface variables documented in `docs/css-hooks.md`.
 
 See `docs/css-hooks.md` for the current hook list.
 
@@ -65,5 +60,5 @@ so keep it concise and user-facing.
 
 ## 5. Check the Rules
 
-Before opening a pull request, read `CONTRIBUTING.md` for review, license,
-remote asset, and recovery requirements.
+Before opening a pull request, read `CONTRIBUTING.md` for review, remote asset,
+and recovery requirements.

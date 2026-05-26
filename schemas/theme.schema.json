@@ -50,16 +50,6 @@
         }
       }
     },
-    "license": {
-      "type": "string",
-      "minLength": 1,
-      "maxLength": 80
-    },
-    "licenseUrl": {
-      "type": "string",
-      "format": "uri",
-      "maxLength": 240
-    },
     "description": {
       "type": "string",
       "minLength": 1,
@@ -73,6 +63,7 @@
         "maxLength": 24
       },
       "uniqueItems": true,
+      "minItems": 1,
       "maxItems": 3
     },
     "testedWith": {

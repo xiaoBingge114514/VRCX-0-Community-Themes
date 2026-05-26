@@ -12,7 +12,6 @@ https://raw.githubusercontent.com/Map1en/VRCX-0-Community-Themes/master/themes/i
 
 ## Maintained Themes
 
-- [NASA APOD Wallpaper](themes/nasa-apod-wallpaper/) by Map1en
 - [Trans Theme Example](themes/trans-theme-example/) by Map1en
 - [Darkblue Theme](themes/darkblue-theme/) by xiaoBingge114514
 
@@ -40,13 +39,6 @@ themes/
 VRCX-0 installs a local snapshot of `theme.css`; it should not live-load a
 remote CSS file at runtime.
 
-Some catalog entries may be app-coordinated examples. `nasa-apod-wallpaper` is a
-special id handled by VRCX-0 so the app can resolve the NASA APOD API before
-injecting the installed CSS snapshot. It only uses APOD entries whose API
-response has no `copyright` field; entries with a copyright credit are skipped,
-and NASA/APOD metadata remains the source of truth. This is a metadata-based
-safeguard, not legal advice.
-
 ## Documentation
 
 - Author a theme: `docs/author-guide.md`
@@ -57,6 +49,5 @@ safeguard, not legal advice.
 - Compatibility policy: `docs/compatibility.md`
 - Manifest examples and schemas: `examples/`, `schemas/`
 
-The repository framework, documentation, schemas, and default theme license are
-GPL-3.0-only unless stated otherwise. If a theme omits `license` in
-`theme.json`, it is accepted as GPL-3.0-only.
+By submitting a theme to this catalog, the contributor agrees that the submitted
+theme follows GPL-3.0-only for VRCX-0 community theme distribution.

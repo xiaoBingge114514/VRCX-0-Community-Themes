@@ -1,0 +1,24 @@
+name: Validate Themes
+
+on:
+  pull_request:
+
+jobs:
+  validate:
+    name: Validate theme catalog
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Run validator tests
+        run: node --test scripts/validate-themes.test.mjs
+
+      - name: Validate theme catalog
+        run: node scripts/validate-themes.mjs
