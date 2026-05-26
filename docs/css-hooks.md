@@ -16,14 +16,13 @@ VRCX-0 applies CSS in this order:
 Installed community themes and user override CSS win over official background
 CSS. User override CSS wins over installed theme CSS.
 
-## App-wide Wallpaper
+## App-wide Image Variables
 
-Use app-wide wallpaper variables when one image should show behind the full app
-shell, including titlebar, sidebars, main content, side panel, and status bar.
+These variables control an app-wide image layer behind the shell surfaces.
 
 ```css
 :root {
-  --vrcx-0-wallpaper-image: url("https://example.com/wallpaper.jpg");
+  --vrcx-0-wallpaper-image: url("https://example.com/image.jpg");
   --vrcx-0-wallpaper-size: cover;
   --vrcx-0-wallpaper-position: center;
   --vrcx-0-wallpaper-repeat: no-repeat;
@@ -32,14 +31,13 @@ shell, including titlebar, sidebars, main content, side panel, and status bar.
 }
 ```
 
-## Main-content Wallpaper
+## Main-content Image Variables
 
-Use main-content wallpaper variables when only the center page outlet should
-show a wallpaper.
+These variables control an image layer behind the center page outlet.
 
 ```css
 :root {
-  --vrcx-0-main-content-wallpaper-image: url("https://example.com/center.jpg");
+  --vrcx-0-main-content-wallpaper-image: url("https://example.com/image.jpg");
   --vrcx-0-main-content-wallpaper-size: cover;
   --vrcx-0-main-content-wallpaper-position: center;
   --vrcx-0-main-content-wallpaper-repeat: no-repeat;
@@ -67,7 +65,7 @@ Surface variables control the visible background of the major app areas.
 }
 ```
 
-Example app-wide wallpaper surfaces:
+Example transparent shell surfaces:
 
 ```css
 :root {

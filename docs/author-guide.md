@@ -34,7 +34,7 @@ Important fields:
 - `license`: optional redistributable license for this theme. If omitted,
   GPL-3.0-only applies.
 - `licenseUrl`: optional link to the license text when `license` is set.
-- `tags`: up to three tags; any language is allowed, English is recommended.
+- `tags`: up to three short tags.
 - `testedWith`: latest VRCX-0 version you tested.
 - `remoteAssets`: `true` if CSS references remote images or fonts.
 - `accentMode`: `true` if users can keep using VRCX-0's built-in accent color
@@ -47,11 +47,8 @@ After adding the directory, add only the theme id string to `themes/index.json`.
 Theme CSS is ordinary CSS. You can use VRCX-0 surface variables, app CSS
 variables, and selectors.
 
-Prefer VRCX-0 owned variables for layout-level effects:
-
-- App-wide wallpaper: `--vrcx-0-wallpaper-image`.
-- Center-only wallpaper: `--vrcx-0-main-content-wallpaper-image`.
-- Shell transparency: `--vrcx-0-*-surface`.
+Prefer VRCX-0 owned variables for layout-level effects, such as shell and app
+surface variables documented in `docs/css-hooks.md`.
 
 See `docs/css-hooks.md` for the current hook list.
 

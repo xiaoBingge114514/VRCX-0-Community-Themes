@@ -51,7 +51,6 @@ be shown in the app. `preview.webp` is the required catalog image.
 
 Allowed:
 
-- VRCX-0 CSS variables such as `--vrcx-0-wallpaper-image`.
 - App-owned surface variables documented in `docs/css-hooks.md`.
 - Ordinary CSS selectors.
 - Tailwind/shadcn class overrides, with the understanding that they are not

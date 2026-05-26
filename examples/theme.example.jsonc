@@ -25,9 +25,8 @@
   // Short description shown in VRCX-0.
   "description": "Community theme for VRCX-0.",
 
-  // Search and filtering tags. Any language is allowed, but English tags are
-  // recommended. Keep at most three.
-  "tags": ["dark", "glass", "wallpaper"],
+  // Search and filtering tags. Keep at most three.
+  "tags": ["dark", "glass", "minimal"],
 
   // Latest VRCX-0 version that the author has tested.
   "testedWith": "2.2.1",
