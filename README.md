@@ -42,7 +42,10 @@ remote CSS file at runtime.
 
 Some catalog entries may be app-coordinated examples. `nasa-apod-wallpaper` is a
 special id handled by VRCX-0 so the app can resolve the NASA APOD API before
-injecting the installed CSS snapshot.
+injecting the installed CSS snapshot. It only uses APOD entries whose API
+response has no `copyright` field; entries with a copyright credit are skipped,
+and NASA/APOD metadata remains the source of truth. This is a metadata-based
+safeguard, not legal advice.
 
 ## Documentation
 

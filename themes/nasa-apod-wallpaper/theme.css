@@ -3,8 +3,8 @@
 
   This theme has a matching built-in provider in VRCX-0. When the theme id is
   "nasa-apod-wallpaper", VRCX-0 asks the NASA APOD API for the latest image
-  entry, keeps the APOD credit in the installed CSS snapshot, and replaces the
-  wallpaper variable below with the resolved image URL.
+  entry without copyright metadata, skips entries with a copyright credit, and
+  replaces the wallpaper variable below with the resolved image URL.
 */
 
 :root {
