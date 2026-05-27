@@ -12,5 +12,6 @@
   "tags": ["dark", "blue", "minimal"],
   "testedWith": "2.2.1",
   "remoteAssets": false,
+  "darkMode": true,
   "accentMode": false
 }

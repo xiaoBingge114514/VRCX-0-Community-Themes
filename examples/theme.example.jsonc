@@ -30,6 +30,10 @@
   // Set true if theme.css references remote images or fonts.
   "remoteAssets": true,
 
+  // Whether this theme is based on VRCX-0's dark mode tokens.
+  // true applies the app's dark class. false uses the light-mode base.
+  "darkMode": true,
+
   // Whether users can keep using VRCX-0's built-in accent color selector.
   // true keeps the selector available. false means the theme controls accents.
   "accentMode": false

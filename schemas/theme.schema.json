@@ -13,6 +13,7 @@
     "tags",
     "testedWith",
     "remoteAssets",
+    "darkMode",
     "accentMode"
   ],
   "properties": {
@@ -71,6 +72,9 @@
       "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?$"
     },
     "remoteAssets": {
+      "type": "boolean"
+    },
+    "darkMode": {
       "type": "boolean"
     },
     "accentMode": {

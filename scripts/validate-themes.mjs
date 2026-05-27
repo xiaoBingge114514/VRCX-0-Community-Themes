@@ -151,6 +151,9 @@ function validateManifest(root, manifest, manifestPath, directoryName, errors) {
   if (typeof manifest.remoteAssets !== 'boolean') {
     errors.push(`${file}: remoteAssets must be a boolean`);
   }
+  if (typeof manifest.darkMode !== 'boolean') {
+    errors.push(`${file}: darkMode must be a boolean`);
+  }
   if (typeof manifest.accentMode !== 'boolean') {
     errors.push(`${file}: accentMode must be a boolean`);
   }

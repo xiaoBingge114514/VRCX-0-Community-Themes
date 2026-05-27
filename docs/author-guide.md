@@ -34,6 +34,8 @@ Important fields:
 - `tags`: one to three short tags.
 - `testedWith`: latest VRCX-0 version you tested.
 - `remoteAssets`: `true` if CSS references remote images or fonts.
+- `darkMode`: `true` if the theme is based on VRCX-0 dark mode tokens,
+  `false` if it is based on the light-mode base.
 - `accentMode`: `true` if users can keep using VRCX-0's built-in accent color
   selector, `false` if the theme controls accent colors.
 

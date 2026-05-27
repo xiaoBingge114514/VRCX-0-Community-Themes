@@ -10,5 +10,6 @@
   "tags": ["trans", "pride", "gradient"],
   "testedWith": "2.2.1",
   "remoteAssets": false,
+  "darkMode": true,
   "accentMode": false
 }

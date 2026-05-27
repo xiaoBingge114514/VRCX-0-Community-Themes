@@ -26,6 +26,8 @@ For file preparation and manifest field details, see `docs/author-guide.md`.
 - By submitting a theme, the contributor agrees that the submitted theme follows
   GPL-3.0-only for VRCX-0 community theme distribution.
 - If the CSS references remote images or fonts, `remoteAssets` must be `true`.
+- Set `darkMode` to `true` when the CSS is written against VRCX-0's dark-mode
+  base, or `false` when it is written against the light-mode base.
 - `preview.webp` must be WebP, compressed, and no larger than 256 KiB.
 - The preview image must only include assets the author owns, has permission to
   use, or may redistribute.
@@ -80,6 +82,7 @@ Before opening a pull request:
 - Check that the theme directory name matches `id`.
 - Check that `themes/index.json` contains only the theme id string.
 - Check that `remoteAssets` matches the CSS.
+- Check that `darkMode` matches the CSS base mode.
 - Confirm the UI remains recoverable with the theme enabled.
 - Confirm `preview.webp` is included, compressed, and no larger than 256 KiB.
 - Confirm the preview image uses only assets the author owns, has permission to

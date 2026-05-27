@@ -39,6 +39,7 @@ async function writeTheme(root, id, manifest = {}) {
         tags: ['dark'],
         testedWith: '2.2.1',
         remoteAssets: false,
+        darkMode: true,
         accentMode: false,
         ...manifest
       },
