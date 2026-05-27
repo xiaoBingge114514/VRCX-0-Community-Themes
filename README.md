@@ -41,6 +41,12 @@ themes/
 VRCX-0 installs a local snapshot of `theme.css`; it should not live-load a
 remote CSS file at runtime.
 
+## Preview Generator
+
+Generate quick skeleton previews for VRCX-0 themes and layouts.
+
+Third-party maintained tool: https://vrcx.puddingkc.com/
+
 ## Documentation
 
 - Author a theme: `docs/author-guide.md`
