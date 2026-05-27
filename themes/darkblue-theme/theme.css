@@ -96,7 +96,7 @@ border-color: rgba(102, 177, 255, 0.1) !important; /* 极淡的描边 */
 /* --- 深蓝主题增强：加深卡片层级 --- */
 /* 目标：让卡片比基础背景（#1E1F26）稍微深一点，增加立体感 */
 .bg-card {
-background-color: #232530 !important; 
+background-color: #2A313C !important; 
 }
 
 
