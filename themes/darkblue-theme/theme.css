@@ -1,6 +1,6 @@
 /* Darkblue Theme */
 
-.root {
+.dark {
   /* 基础 */
   --background: hsl(216, 17%, 11%) !important;           /*  页面背景 */
   --foreground: hsl(210, 15%, 100%) !important;          /*  主文本 */
@@ -74,13 +74,6 @@ background-color: rgba(102, 177, 255, 0.4) !important;  /* 主色 #66b1ff 半透
 color: #ffffff !important;
 }
 
-/* --- 文本框外选择文本的主题色 --- */
-::selection {
-    background-color: rgba(102, 177, 255, 0.55) !important; 
-    /* 你的主题色 #66b1ff，透明度 40% */
-    color: #ffffff !important;
-}
-
 /* --- 侧边栏背景优化：深空静谧蓝 (低饱和/不显眼) --- */
 /* 使用与页面背景 --background 颜色一致的深蓝基底 */
 .vrcx-0-sidebar-surface {
@@ -97,8 +90,9 @@ border-color: rgba(102, 177, 255, 0.1) !important; /* 极淡的描边 */
 /* --- 深蓝主题增强：加深卡片层级 --- */
 /* 目标：让卡片比基础背景（#1E1F26）稍微深一点，增加立体感 */
 .bg-card {
-background-color: #2A313C !important; 
+background-color: #232530 !important; 
 }
+
 
 /* --- 全局按钮与链接悬停高亮 --- */
 button:hover,
@@ -124,6 +118,12 @@ a:hover {
 /* 3. 顺便把外层 group 容器的鼠标事件限制解除（以防万一） */
 .group [data-slot="toggle-group-item"] {
     pointer-events: auto !important;
+}
+
+[data-slot="toggle-group-item"][data-state="on"],
+[data-slot="toggle-group-item"][aria-pressed="true"] {
+    background-color: #2563EB !important;
+    color: #ffffff !important;
 }
 
 /* --- 局部高亮：仅限好友位置内的卡片 --- */
