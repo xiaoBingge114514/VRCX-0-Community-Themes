@@ -14,12 +14,6 @@ content.
 - [Nord Light](themes/nord-light-theme/) by PuddingKC
 - [OLED Black](themes/oled-black-theme/) by PuddingKC
 
-## Theme Developer Build
-
-Theme authors should download the dedicated VRCX-0 theme developer build from
-[package-theme-devkit](https://github.com/Map1en/VRCX-0/actions/workflows/package-theme-devkit.yml).
-It is intended for theme CSS development and debugging.
-
 ## Documentation
 
 - Submit, update, or author a theme: `CONTRIBUTING.md`
