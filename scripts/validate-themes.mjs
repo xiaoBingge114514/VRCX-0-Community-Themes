@@ -92,6 +92,23 @@ function validateCatalog(root, catalog, catalogPath, errors) {
   return catalog.themes.filter((id) => typeof id === 'string');
 }
 
+async function validateReadmeThemeLinks(root, catalogIds, errors) {
+  const readmePath = path.join(root, 'README.md');
+  let readme;
+  try {
+    readme = await readFile(readmePath, 'utf8');
+  } catch (error) {
+    errors.push(`${toDisplayPath(root, readmePath)}: ${error.message}`);
+    return;
+  }
+
+  for (const id of catalogIds) {
+    if (!readme.includes(`themes/${id}`)) {
+      errors.push(`${toDisplayPath(root, readmePath)}: missing theme link for "${id}"`);
+    }
+  }
+}
+
 function validateManifest(root, manifest, manifestPath, directoryName, errors) {
   const file = toDisplayPath(root, manifestPath);
   if (!manifest) {
@@ -188,6 +205,7 @@ async function validate(root) {
   const catalog = await readJson(root, catalogPath, errors);
   const catalogIds = validateCatalog(root, catalog, catalogPath, errors);
   const catalogIdSet = new Set(catalogIds);
+  await validateReadmeThemeLinks(root, catalogIds, errors);
 
   let entries = [];
   try {

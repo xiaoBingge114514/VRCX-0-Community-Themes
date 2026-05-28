@@ -49,6 +49,14 @@ async function writeTheme(root, id, manifest = {}) {
   );
 }
 
+async function writeReadme(root, themeIds) {
+  const themeList = themeIds.map((id) => `- [${id}](themes/${id}/) by Author`).join('\n');
+  await writeFile(
+    path.join(root, 'README.md'),
+    `# VRCX-0 Community Themes\n\n## Maintained Themes\n\n${themeList}\n`
+  );
+}
+
 function runValidator(root) {
   return new Promise((resolve) => {
     execFile(process.execPath, [validatorPath, '--root', root], { cwd: repoRoot }, (error, stdout, stderr) => {
@@ -63,6 +71,7 @@ function runValidator(root) {
 test('accepts a valid catalog and theme package', async () => {
   const root = await createRoot();
   await writeTheme(root, 'valid-theme');
+  await writeReadme(root, ['valid-theme']);
   await writeFile(
     path.join(root, 'themes', 'index.json'),
     `${JSON.stringify({ schemaVersion: 1, themes: ['valid-theme'] }, null, 2)}\n`
@@ -74,8 +83,24 @@ test('accepts a valid catalog and theme package', async () => {
   assert.match(result.output, /Theme validation passed/);
 });
 
+test('requires the root README to link each catalog theme id', async () => {
+  const root = await createRoot();
+  await writeTheme(root, 'linked-theme');
+  await writeFile(path.join(root, 'README.md'), '# VRCX-0 Community Themes\n');
+  await writeFile(
+    path.join(root, 'themes', 'index.json'),
+    `${JSON.stringify({ schemaVersion: 1, themes: ['linked-theme'] }, null, 2)}\n`
+  );
+
+  const result = await runValidator(root);
+
+  assert.equal(result.code, 1, result.output);
+  assert.match(result.output, /README\.md: missing theme link for "linked-theme"/);
+});
+
 test('reports duplicate ids, missing tags, invalid JSON, and preview issues', async () => {
   const root = await createRoot();
+  await writeReadme(root, ['duplicate-theme']);
   await writeFile(
     path.join(root, 'themes', 'index.json'),
     `${JSON.stringify({ schemaVersion: 1, themes: ['duplicate-theme', 'duplicate-theme'] }, null, 2)}\n`
