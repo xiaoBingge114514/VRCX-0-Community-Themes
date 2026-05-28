@@ -79,6 +79,91 @@ Example transparent shell surfaces:
 }
 ```
 
+## shadcn and Tailwind Tokens
+
+VRCX-0 uses shadcn UI with Tailwind CSS v4. Tailwind color utilities such as
+`bg-background`, `text-muted-foreground`, `border-border`, and `ring-ring` are
+mapped through shadcn CSS variables, so theme authors should override the token
+variables instead of targeting every generated utility class.
+
+Common shadcn tokens include:
+
+```css
+:root {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --radius: 0.625rem;
+}
+```
+
+Sidebar components use their own token set:
+
+```css
+:root {
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+```
+
+For broad theme color changes, set these variables on `:root`. If the theme
+uses `darkMode: true`, the app runs with the `.dark` class and the same
+variables can also be scoped under `.dark`.
+
+```css
+:root,
+.dark {
+  --background: oklch(0.18 0.03 260);
+  --foreground: oklch(0.97 0.01 260);
+  --primary: oklch(0.75 0.16 260);
+  --primary-foreground: oklch(0.12 0.02 260);
+  --ring: oklch(0.75 0.16 260);
+  --sidebar: oklch(0.14 0.03 260);
+}
+```
+
+Theme CSS is loaded as plain CSS, not compiled by Tailwind. Do not use
+Tailwind-only directives such as `@apply` in submitted themes. When a targeted
+override is needed, prefer VRCX-0 hooks or shadcn `data-slot` attributes and
+write normal CSS:
+
+```css
+.vrcx-0-data-table [data-slot="table-row"]:hover {
+  background: color-mix(in oklch, var(--muted) 70%, transparent);
+}
+
+.vrcx-0-sidebar-surface [data-slot="sidebar-menu-button"][data-active="true"] {
+  color: var(--sidebar-primary-foreground);
+  background: var(--sidebar-primary);
+}
+```
+
+Direct Tailwind class selectors and shadcn internals can be used for small
+fixes, but they are more fragile than tokens, hook classes, and `data-slot`
+selectors.
+
 ## Hook Classes and Data Attributes
 
 Current app-owned hooks include:
